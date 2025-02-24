@@ -1,0 +1,17 @@
+{
+  "HEADER_INICIO": "Inicio",
+  "HEADER_PROJECTO": "Projecto",
+  "HEADER_SOBRE": "Sobre mi",
+  "HEADER_CONTACTO": "Contacto",
+  "INTRO_TITLE": "Hola, soy",
+  "INTRO_TITLE_AFTER": "Sebastian",
+  "INTRO_DESCRIPTION": "Un desarrollador web centrado en el front-end que construye el front-end de sitios web y aplicaciones web que conduce al éxito del producto en general.",
+  "CATEGORIA_PROJECTOS": "Projecto",
+  "PROJECTOS_TITLE_1": "Innovex Project SaaS",
+  "PROJECTOS_DESCRIPTION_1": "Innovex es un proyecto personal que desarrollé con React y Tailwind CSS. Es una plataforma SaaS que ofrece herramientas avanzadas para monitoreo de tráfico, gestión de inventario y análisis de ventas.",
+  "PROJECTOS_TITLE_2": "DevFlow IA Project",
+  "PROJECTOS_DESCRIPTION_2": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+  "CATEGORIA_SOBRE": "Sobre mi",
+  "SOBRE_DESCRIPTION": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae perspiciatis dolore consequatur, dignissimos, minus rem voluptatum vitae incidunt totam, molestias quae sequi! Corporis perferendis praesentium quo omnis optio a ipsum. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis nostrum molestias facilis reprehenderit, eius illo autem ipsam eos sit eum doloribus, consectetur, impedit error quisquam libero repellendus quos velit tempore. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, deleniti! Architecto ducimus possimus nostrum non cupiditate animi dolorum dignissimos explicabo labore, in iure beatae esse facere reiciendis blanditiis velit fuga.",
+  "CATEGORIA_CONTACTO": "Contacto"
+}

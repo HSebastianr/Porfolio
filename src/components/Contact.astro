@@ -1,0 +1,69 @@
+---
+import Message from "@/components/icons/Message.astro";
+import CopyIcon from "@/components/icons/Copy.astro";
+import SendIcon from "@/components/icons/Send.astro";
+
+---
+
+<section class="flex justify-center items-center gap-4 my-14">
+  <div
+    class="flex justify-center items-center gap-2 bg-[#1e1e1e] px-5 py-2 rounded-2xl"
+  >
+    <Message class="size-6" />
+    <input
+      readonly
+      id="email"
+      class="text-lg bg-transparent pointer-events-none w-60 text-white"
+      value="Sebastianrappu@gmail.com"
+    />
+  </div>
+  <a
+    href="mailto:sebastianrappu@gmail.com"
+    class="bg-[#1e1e1e] hover:bg-[#303030]/95 p-2 rounded-2xl col-span-4 md:col-span-1 relative group/copy grid place-content-center"
+    ><SendIcon class="size-7" />
+    <span
+      id="email-tooltip"
+      class="absolute top-0 left-[50%] -translate-x-[50%] -translate-y-12 px-4 py-2 rounded-xl bg-[#1e1e1e] text-white w-[125px] transition-all duration-200 ease-out opacity-0 group-hover/copy:opacity-100 text-center"
+      >Enviar Email</span
+    >
+  </a>
+  <button
+    id="copy-email"
+    class="bg-[#1e1e1e] hover:bg-[#303030]/95 p-2 rounded-2xl col-span-4 md:col-span-1 relative group/copy grid place-content-center"
+    ><CopyIcon class="size-7" />
+    <span
+      id="tooltip-email"
+      class="absolute top-0 left-[50%] -translate-x-[50%] -translate-y-12 px-4 py-2 rounded-xl bg-[#1e1e1e] text-white w-[125px] transition-all duration-200 ease-out opacity-0 group-hover/copy:opacity-100 text-center"
+      >Copiar</span
+    >
+  </button>
+</section>
+
+<style>
+  input {
+    user-select: none;
+    border: none;
+  }
+</style>
+
+<script>
+  const email = document.getElementById("email") as HTMLInputElement;
+  const tooltipEmail = document.getElementById("tooltip-email");
+
+  const buttonEmail = document.getElementById("copy-email");
+
+  buttonEmail?.addEventListener("click", () => {
+    if (email) {
+      navigator?.clipboard.writeText(email.value);
+      if (tooltipEmail) {
+        tooltipEmail.innerHTML = "Copiado";
+      }
+    }
+  });
+
+  buttonEmail?.addEventListener("mouseleave", () => {
+    if (tooltipEmail) {
+      tooltipEmail.innerHTML = "Copiar";
+    }
+  });
+</script>

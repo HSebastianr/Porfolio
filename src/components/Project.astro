@@ -1,0 +1,118 @@
+---
+import ButtonProject from "@/components/ButtonProject.astro";
+import JSIcon from "@/components/icons/Js.astro";
+import TailwindIcon from "@/components/icons/Tailwind.astro";
+import ReactIcon from "@/components/icons/React.astro";
+import AstroIcon from "@/components/icons/Astros.astro";
+import LinkIcon from "@/components/icons/Link.astro";
+import CodeIcon from "@/components/icons/Code.astro";
+import NextjsIcon from "@/components/icons/Nextjs.astro";
+import FirebaseIcon from "@/components/icons/Firebase.astro";
+import { getI18N } from "@/i18n/index";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+const TAGS = {
+  JS: {
+    name: "Javascript",
+    class:
+      "bg-yellow-100 text-yellow-800 dark:bg-transparent dark:text-yellow-300 border-yellow-300",
+    icon: JSIcon,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class:
+      "bg-sky-100 text-sky-800 dark:bg-transparent dark:text-sky-300 border-sky-300",
+    icon: TailwindIcon,
+  },
+  REACT: {
+    name: "React",
+    class:
+      "bg-blue-100 text-blue-800 dark:bg-transparent dark:text-blue-300 border-blue-300",
+    icon: ReactIcon,
+  },
+  ASTRO: {
+    name: "Astro",
+    class:
+      "bg-orange-100 text-orange-800 dark:bg-transparent dark:text-orange-300 border-orange-300",
+    icon: AstroIcon,
+  },
+  NEXT: {
+    name: "Nextjs",
+    class:
+      "bg-neutral-200 text-black dark:bg-transparent dark:text-white dark:border-white border-black",
+    icon: NextjsIcon,
+  },
+  FIREBASE: {
+    name: "Firebase",
+    class:
+      "bg-orange-100 text-orange-800 dark:bg-transparent dark:text-orange-300 border-orange-300",
+    icon: FirebaseIcon,
+  },
+};
+
+const Projects = [
+  {
+    titulo: `${i18n.PROJECTOS_TITLE_1}`,
+    texto: `${i18n.PROJECTOS_DESCRIPTION_1}`,
+    tags: [TAGS.REACT, TAGS.JS, TAGS.TAILWIND, ],
+    code: "#",
+    demo: "#",
+    img: "../../img/imageSaaS.png",
+  },
+  {
+    titulo: `${i18n.PROJECTOS_TITLE_2}`,
+    texto: `${i18n.PROJECTOS_DESCRIPTION_2}`,
+    tags: [TAGS.NEXT, TAGS.REACT, TAGS.TAILWIND, TAGS.FIREBASE,   ],
+    code: "#",
+    demo: "#",
+    img: "../../img/imageIA.png",
+  },
+];
+---
+
+<section class="grid grid-cols-2 justify-items-center gap-y-10 my-10">
+  {
+    Projects.map(({ titulo, texto, tags, code, demo, img }) => (
+      <div class=" max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-transparent dark:border-[#212121]">
+        <div class="relative">
+          <img
+            class="rounded-t-lg w-full"
+            src={img}
+            alt=""
+          />
+          <div
+            class="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-b from-transparent to-white dark:to-[#000000ea]
+       pointer-events-none"
+          ></div>
+        </div>
+        <div class="p-5">
+          <div class="flex flex-wrap gap-2 mb-2">
+            {tags.map((tag) => (
+              <li
+                class={`flex justify-center p-1 px-3 border rounded-full ${tag.class}`}
+              >
+                <span class="flex items-center gap-2 text-sm">
+                  {tag.icon && <tag.icon class="size-4" />}
+                  {tag.name}
+                </span>
+              </li>
+            ))}
+          </div>
+          <a href="#">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              {titulo}
+            </h5>
+          </a>
+          <p class="mb-3 font-normal text-gray-700 dark:text-white/80">
+            {texto}
+          </p>
+
+          <ButtonProject >Code <CodeIcon class="mx-1 size-5"/></ButtonProject>
+          <ButtonProject >Ver demo <LinkIcon class="mx-1 size-5"/></ButtonProject>
+        </div>
+      </div>
+    ))
+  }
+</section>

@@ -1,0 +1,29 @@
+---
+import { getI18N } from "@/i18n/index"
+
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
+---
+
+<article class="flex justify-center items-center gap-11 mt-14 mb-14">
+    <img class="w-48 h-48 rounded-full animation_img" src="../../img/profile.jpeg" alt="">
+    <div class=" px-[1px] py-24 bg-gray-600 rounded-full"></div>
+    <p class="max-w-[600px] text-black/80 dark:text-white/80" >{i18n.SOBRE_DESCRIPTION}</p>
+</article>
+
+<style>
+    .animation_img {
+        animation: profile__animate 8s ease-in-out infinite 1s;
+    }
+    @keyframes profile__animate {
+    0% {
+        border-radius:  60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+    50% {
+        border-radius:  30% 60% 70% 40%/50% 60% 30% 60%;
+    }
+    100% {
+        border-radius:  60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+}
+</style>

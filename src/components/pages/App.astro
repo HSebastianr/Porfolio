@@ -1,0 +1,87 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getI18N } from "@/i18n/index";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+// Componentes
+import TitleGradiant from "@/components/TitleGradiant.astro";
+import Buttons from "@/components/Buttons.astro";
+import ButtonGmail from "@/components/ButtonGmail.astro";
+import Project from "@/components/Project.astro";
+import AboutUs from "@/components/AboutUs.astro";
+import Skills from "@/components/Skills.astro";
+import Contact from "@/components/Contact.astro";
+
+// Iconos
+import LinkedIn from "@/components/icons/LinkedIn.astro";
+import Github from "@/components/icons/Github.astro";
+import Gmail from "@/components/icons/Gmail.astro";
+import CodeIcon from "@/components/icons/Code.astro";
+import IdIcon from "@/components/icons/Id.astro";
+import MessagesIcon from "@/components/icons/Messages.astro";
+import DarkMode from "../DarkMode.astro";
+---
+
+<Layout title="Portafolio Herlan Sebastian" description="Protafolio">
+  <main>
+    <section
+      class="flex justify-center items-center flex-row w-full lg:w-[940px] mx-auto pt-36 pb-44 gap-x-10"
+    >
+      <div class="text-black dark:text-white">
+        <h1 class="font-extrabold text-5xl my-10">
+          {i18n.INTRO_TITLE}
+          <TitleGradiant />
+        </h1>
+        <p class="font-medium text-lg my-10">
+          {i18n.INTRO_DESCRIPTION}
+        </p>
+
+        <ul class="flex gap-x-4">
+          <Buttons href="https://linkedin.com">
+            <LinkedIn class="w-6 h-6" />LinkedIn
+          </Buttons>
+          <Buttons href="https://linkedin.com">
+            <Github class="w-6 h-6" />GitHub
+          </Buttons>
+          <ButtonGmail href="https://linkedin.com">
+            <Gmail class="w-6 h-6" />Sebastianrappu@gmail.com
+          </ButtonGmail>
+        </ul>
+      </div>
+      <img
+        class="rounded-full w-52 h-52 border-8 border-[#c5c5c5] dark:border-[#2c2c2c]"
+        src="../img/profile.jpeg"
+        alt=""
+      />
+    </section>
+    <section class="w-full lg:w-[940px] mx-auto mb-14" id="Project">
+      <h2
+        class="text-3xl font-semibold flex items-center gap-2 text-black dark:text-white"
+      >
+        <CodeIcon class="size-9 text-black dark:text-white" />
+        {i18n.HEADER_PROJECTO}
+      </h2>
+      <Project />
+    </section>
+    <section class="w-full lg:w-[940px] mx-auto mb-14" id="AboutUs">
+      <h2
+        class="text-3xl font-semibold flex items-center gap-2 text-black dark:text-white"
+      >
+        <IdIcon class="size-9 text-black dark:text-white" />
+        {i18n.HEADER_SOBRE}
+      </h2>
+      <AboutUs />
+      <Skills />
+    </section>
+    <section class="w-full lg:w-[940px] mx-auto" id="Contact">
+      <h2 class="text-3xl font-semibold flex items-center gap-2 text-black dark:text-white">
+        <MessagesIcon class="size-9 text-black dark:text-white " />
+        {i18n.HEADER_CONTACTO}
+      </h2>
+      <Contact />
+    </section>
+    <section class="w-full lg:w-[940px] mx-auto"></section>
+  </main>
+</Layout>

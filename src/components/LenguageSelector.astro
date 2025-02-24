@@ -1,0 +1,65 @@
+---
+import ChevronIcon from "@/components/icons/Chevron.astro";
+
+const { currentLocale = "es", url } = Astro;
+
+const pathname = url.pathname;
+
+let restUrl;
+
+if (pathname.startsWith("/pt")) {
+  const segments = pathname.split("/").slice(2);
+  restUrl = "/" + segments.join("/").replace(/\/+$/, "");
+} else {
+  restUrl = pathname.replace(/\/+$/, "");
+}
+
+const LOCALES: Record<string, { code: string; name: string; href: string }> = {
+  pt: {
+    code: "pt",
+    href: `/pt${restUrl}`,
+    name: "Pt",
+  },
+  es: {
+    code: "es",
+    href: restUrl,
+    name: "Es",
+  },
+};
+
+const currentLocaleData = LOCALES[currentLocale];
+const otherLocales = Object.values(LOCALES).filter(
+  (locale) => locale.code !== currentLocale
+);
+const currentPath = url.pathname.replace(currentLocaleData.href, "");
+---
+
+<div class="relative inline-block text-left">
+  <div class="group text-white rounded-md transition-all">
+    <button
+      type="button"
+      class="inline-flex justify-center items-center w-full gap-x-2"
+      aria-expanded="true"
+      aria-haspopup="true"
+    >
+      {currentLocaleData.name}
+      <ChevronIcon />
+    </button>
+    <ul
+      class="group-hover:block group-hover:animate-fade-down group-hover:animate-duration-200 hidden pt-0.5 absolute w-full justify-center"
+    >
+      {
+        otherLocales.map((locale) => (
+          <li class="">
+            <a
+              class="rounded-md bg-black/50 hover:bg-[#303030] whitespace-no-wrap justify-center inline-flex items-center w-full px-6 py-1 mt-[0.4rem]"
+              href={`${locale.href}${currentPath}`}
+            >
+              {locale.name}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</div>

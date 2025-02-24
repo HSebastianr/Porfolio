@@ -1,0 +1,18 @@
+{
+    "HEADER_INICIO": "Inicio",
+    "HEADER_PROJECTO": "Projeto",
+    "HEADER_SOBRE": "Sobre mim",
+    "HEADER_CONTACTO": "Contato",
+    "INTRO_TITLE": "Ola, sou",
+    "INTRO_TITLE_AFTER": "Sebastian",
+    "INTRO_DESCRIPTION": "Um desenvolvedor web focado no front-end que constrói o front-end de sites e aplicativos, contribuindo para o sucesso geral do produto.",
+    "CATEGORIA_PROJECTOS": "Projeto",
+    "PROJECTOS_TITLE_1": "Musica",
+    "PROJECTOS_DESCRIPTION_1": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    "PROJECTOS_TITLE_2": "Reproductor de Musica",
+    "PROJECTOS_DESCRIPTION_2": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    "CATEGORIA_SOBRE": "Sobre mim",
+    "SOBRE_DESCRIPTION": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae perspiciatis dolore consequatur, dignissimos, minus rem voluptatum vitae incidunt totam, molestias quae sequi! Corporis perferendis praesentium quo omnis optio a ipsum. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis nostrum molestias facilis reprehenderit, eius illo autem ipsam eos sit eum doloribus, consectetur, impedit error quisquam libero repellendus quos velit tempore. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, deleniti! Architecto ducimus possimus nostrum non cupiditate animi dolorum dignissimos explicabo labore, in iure beatae esse facere reiciendis blanditiis velit fuga.",
+    "CATEGORIA_CONTACTO": "Contato"
+  }
+  
