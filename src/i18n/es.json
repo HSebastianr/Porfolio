@@ -5,13 +5,12 @@
   "HEADER_CONTACTO": "Contacto",
   "INTRO_TITLE": "Hola, soy",
   "INTRO_TITLE_AFTER": "Sebastian",
+  "INTRO_BADGE": "Disponible para trabajar",
   "INTRO_DESCRIPTION": "Un desarrollador web centrado en el front-end que construye el front-end de sitios web y aplicaciones web que conduce al éxito del producto en general.",
   "CATEGORIA_PROJECTOS": "Projecto",
-  "PROJECTOS_TITLE_1": "Innovex Project SaaS",
-  "PROJECTOS_DESCRIPTION_1": "Innovex es un proyecto personal que desarrollé con React y Tailwind CSS. Es una plataforma SaaS que ofrece herramientas avanzadas para monitoreo de tráfico, gestión de inventario y análisis de ventas.",
   "PROJECTOS_TITLE_2": "DevFlow IA Project",
-  "PROJECTOS_DESCRIPTION_2": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+  "PROJECTOS_DESCRIPTION_2": "Un innovador chat con IA desarrollado con Next.js y React. Proporciona asistencia en tiempo real a desarrolladores, ayudando a crear componentes y resolver dudas, con una interfaz moderna y fluida.",
   "CATEGORIA_SOBRE": "Sobre mi",
-  "SOBRE_DESCRIPTION": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae perspiciatis dolore consequatur, dignissimos, minus rem voluptatum vitae incidunt totam, molestias quae sequi! Corporis perferendis praesentium quo omnis optio a ipsum. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis nostrum molestias facilis reprehenderit, eius illo autem ipsam eos sit eum doloribus, consectetur, impedit error quisquam libero repellendus quos velit tempore. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, deleniti! Architecto ducimus possimus nostrum non cupiditate animi dolorum dignissimos explicabo labore, in iure beatae esse facere reiciendis blanditiis velit fuga.",
+  "SOBRE_DESCRIPTION": "Mi viaje en la programación comenzó hace tres años, explorando y creando proyectos personales que me permitieron dominar tecnologías como React, TypeScript y Tailwind CSS. A lo largo de este tiempo, he diseñado interfaces modernas y dinámicas, centrándome en la experiencia del usuario y el rendimiento web. Cada proyecto ha sido una oportunidad para perfeccionar mis habilidades, desde el desarrollo de aplicaciones interactivas hasta la implementación de diseños responsivos y optimizados. Me apasiona convertir ideas complejas en soluciones digitales claras y funcionales. Estoy siempre en busca de nuevos retos y colaboraciones, dispuesto a aportar mi creatividad y conocimientos para crear productos innovadores.",
   "CATEGORIA_CONTACTO": "Contacto"
 }

@@ -5,7 +5,7 @@ import SendIcon from "@/components/icons/Send.astro";
 
 ---
 
-<section class="flex justify-center items-center gap-4 my-14">
+<section class="flex justify-center items-center gap-2 md:gap-4 my-14">
   <div
     class="flex justify-center items-center gap-2 bg-[#1e1e1e] px-5 py-2 rounded-2xl"
   >
@@ -13,7 +13,7 @@ import SendIcon from "@/components/icons/Send.astro";
     <input
       readonly
       id="email"
-      class="text-lg bg-transparent pointer-events-none w-60 text-white"
+      class="text-sm md:text-lg lg:text-lg bg-transparent pointer-events-none w-[12rem] lg:w-60 text-white"
       value="Sebastianrappu@gmail.com"
     />
   </div>
@@ -29,7 +29,7 @@ import SendIcon from "@/components/icons/Send.astro";
   </a>
   <button
     id="copy-email"
-    class="bg-[#1e1e1e] hover:bg-[#303030]/95 p-2 rounded-2xl col-span-4 md:col-span-1 relative group/copy grid place-content-center"
+    class="bg-[#1e1e1e] hover:bg-[#303030]/95 p-2 rounded-2xl col-span-4 md:col-span-1 hidden  relative group/copy md:grid lg:grid place-content-center"
     ><CopyIcon class="size-7" />
     <span
       id="tooltip-email"

@@ -5,10 +5,10 @@ const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
 ---
 
-<article class="flex justify-center items-center gap-11 mt-14 mb-14">
+<article class="flex flex-col md:flex-row lg:flex-row justify-center items-center gap-11 mt-14 mb-14">
     <img class="w-48 h-48 rounded-full animation_img" src="../../img/profile.jpeg" alt="">
-    <div class=" px-[1px] py-24 bg-gray-600 rounded-full"></div>
-    <p class="max-w-[600px] text-black/80 dark:text-white/80" >{i18n.SOBRE_DESCRIPTION}</p>
+    <div class="px-0 py-0 md:px-[1px] md:py-24 lg:px-[1px] lg:py-24 bg-gray-600 rounded-full"></div>
+    <p class="max-w-[600px] text-black/80 dark:text-white/80">{i18n.SOBRE_DESCRIPTION}</p>
 </article>
 
 <style>

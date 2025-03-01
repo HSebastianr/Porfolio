@@ -22,52 +22,52 @@ import CodeIcon from "@/components/icons/Code.astro";
 import IdIcon from "@/components/icons/Id.astro";
 import MessagesIcon from "@/components/icons/Messages.astro";
 import DarkMode from "../DarkMode.astro";
+import Badge from "../Badge.astro";
 ---
 
 <Layout title="Portafolio Herlan Sebastian" description="Protafolio">
   <main>
-    <section
-      class="flex justify-center items-center flex-row w-full lg:w-[940px] mx-auto pt-36 pb-44 gap-x-10"
-    >
-      <div class="text-black dark:text-white">
-        <h1 class="font-extrabold text-5xl my-10">
-          {i18n.INTRO_TITLE}
-          <TitleGradiant />
-        </h1>
-        <p class="font-medium text-lg my-10">
-          {i18n.INTRO_DESCRIPTION}
-        </p>
+    <section class="flex flex-col justify-center items-center w-[300px] md:w-[500px] lg:w-[940px] mx-auto pt-36 pb-44 gap-y-10">
+      <div class="flex flex-col lg:flex-row gap-2 lg:gap-8">
 
-        <ul class="flex gap-x-4">
-          <Buttons href="https://linkedin.com">
-            <LinkedIn class="w-6 h-6" />LinkedIn
-          </Buttons>
-          <Buttons href="https://linkedin.com">
-            <Github class="w-6 h-6" />GitHub
-          </Buttons>
-          <ButtonGmail href="https://linkedin.com">
-            <Gmail class="w-6 h-6" />Sebastianrappu@gmail.com
-          </ButtonGmail>
-        </ul>
+        <img
+          class="rounded-full w-20 h-20 md:w-40 md:h-40 lg:w-52 lg:h-52 border-5 lg:border-8 border-[#c5c5c5] dark:border-[#2c2c2c]"
+          src="../img/profile.jpeg"
+          alt=""
+        />
+        <div class="text-black dark:text-white text-center">
+          <h1 class="flex flex-wrap gap-2 items-center font-extrabold md:text-3xl lg:text-5xl">
+            {i18n.INTRO_TITLE}
+            <TitleGradiant /> <Badge>{i18n.INTRO_BADGE}</Badge>
+          </h1>
+          <p class="font-medium text-sm lg:text-lg my-4 md:my-8 lg:my-10 w-10/12 text-start">
+            {i18n.INTRO_DESCRIPTION} 
+          </p>
+      
+          <ul class="flex gap-x-2 lg:gap-x-4">
+            <Buttons href="https://linkedin.com">
+              <LinkedIn class="w-4 h-4 lg:w-6 lg:h-6" />LinkedIn
+            </Buttons>
+            <Buttons href="https://linkedin.com">
+              <Gmail class="w-4 h-4 lg:w-6 lg:h-6" />Contact me
+            </Buttons>
+          </ul>
+        </div>
       </div>
-      <img
-        class="rounded-full w-52 h-52 border-8 border-[#c5c5c5] dark:border-[#2c2c2c]"
-        src="../img/profile.jpeg"
-        alt=""
-      />
     </section>
-    <section class="w-full lg:w-[940px] mx-auto mb-14" id="Project">
+    
+    <section class="w-[300px] md:w-[700px] lg:w-[940px] mx-auto mb-14" id="Project">
       <h2
-        class="text-3xl font-semibold flex items-center gap-2 text-black dark:text-white"
+        class="md:text-2xl lg:text-3xl font-semibold flex items-center gap-2 text-black dark:text-white"
       >
         <CodeIcon class="size-9 text-black dark:text-white" />
         {i18n.HEADER_PROJECTO}
       </h2>
       <Project />
     </section>
-    <section class="w-full lg:w-[940px] mx-auto mb-14" id="AboutUs">
+    <section class="w-[300px] md:w-[700px] lg:w-[940px] mx-auto mb-14" id="AboutUs">
       <h2
-        class="text-3xl font-semibold flex items-center gap-2 text-black dark:text-white"
+        class="md:text-2xl lg:text-3xl font-semibold flex items-center gap-2 text-black dark:text-white"
       >
         <IdIcon class="size-9 text-black dark:text-white" />
         {i18n.HEADER_SOBRE}
@@ -75,13 +75,13 @@ import DarkMode from "../DarkMode.astro";
       <AboutUs />
       <Skills />
     </section>
-    <section class="w-full lg:w-[940px] mx-auto" id="Contact">
-      <h2 class="text-3xl font-semibold flex items-center gap-2 text-black dark:text-white">
+    <section class="w-[300px] md:w-[700px] lg:w-[940px] mx-auto" id="Contact">
+      <h2 class="text-xl md:text-2xl lg:text-3xl font-semibold flex items-center gap-2 text-black dark:text-white">
         <MessagesIcon class="size-9 text-black dark:text-white " />
         {i18n.HEADER_CONTACTO}
       </h2>
       <Contact />
     </section>
-    <section class="w-full lg:w-[940px] mx-auto"></section>
+    <section class="w-[300px] md:w-[700px] lg:w-[940px] mx-auto"></section>
   </main>
 </Layout>

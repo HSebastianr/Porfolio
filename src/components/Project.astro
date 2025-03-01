@@ -21,7 +21,7 @@ const TAGS = {
     icon: JSIcon,
   },
   TAILWIND: {
-    name: "Tailwind CSS",
+    name: "Tailwind",
     class:
       "bg-sky-100 text-sky-800 dark:bg-transparent dark:text-sky-300 border-sky-300",
     icon: TailwindIcon,
@@ -54,25 +54,17 @@ const TAGS = {
 
 const Projects = [
   {
-    titulo: `${i18n.PROJECTOS_TITLE_1}`,
-    texto: `${i18n.PROJECTOS_DESCRIPTION_1}`,
-    tags: [TAGS.REACT, TAGS.JS, TAGS.TAILWIND, ],
-    code: "#",
-    demo: "#",
-    img: "../../img/imageSaaS.png",
-  },
-  {
     titulo: `${i18n.PROJECTOS_TITLE_2}`,
     texto: `${i18n.PROJECTOS_DESCRIPTION_2}`,
-    tags: [TAGS.NEXT, TAGS.REACT, TAGS.TAILWIND, TAGS.FIREBASE,   ],
-    code: "#",
-    demo: "#",
+    tags: [TAGS.NEXT, TAGS.REACT, TAGS.TAILWIND, TAGS.FIREBASE,],
+    code: "https://github.com/HSebastianr/DevFlow-IA",
+    demo: "https://devflowia.netlify.app/",
     img: "../../img/imageIA.png",
   },
 ];
 ---
 
-<section class="grid grid-cols-2 justify-items-center gap-y-10 my-10">
+<section class="grid grid-rows-1 md:grid-cols-2 lg:grid-cols-2 justify-items-center gap-y-10 my-10">
   {
     Projects.map(({ titulo, texto, tags, code, demo, img }) => (
       <div class=" max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-transparent dark:border-[#212121]">
@@ -101,16 +93,16 @@ const Projects = [
             ))}
           </div>
           <a href="#">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            <h5 class="mb-2 text-xl md:text-2xl lg:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
               {titulo}
             </h5>
           </a>
-          <p class="mb-3 font-normal text-gray-700 dark:text-white/80">
+          <p class="mb-3 text-sm md:text-base lg:text-base font-normal text-gray-700 dark:text-white/80">
             {texto}
           </p>
 
-          <ButtonProject >Code <CodeIcon class="mx-1 size-5"/></ButtonProject>
-          <ButtonProject >Ver demo <LinkIcon class="mx-1 size-5"/></ButtonProject>
+          <ButtonProject href={code} target="_blank" >Code <CodeIcon class="mx-1 size-5"/></ButtonProject>
+          <ButtonProject href={demo} target="_blank" >Ver demo <LinkIcon class="mx-1 size-5"/></ButtonProject>
         </div>
       </div>
     ))
