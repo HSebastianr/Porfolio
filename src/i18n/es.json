@@ -10,6 +10,8 @@
   "CATEGORIA_PROJECTOS": "Projecto",
   "PROJECTOS_TITLE_2": "DevFlow IA Project",
   "PROJECTOS_DESCRIPTION_2": "Un innovador chat con IA desarrollado con Next.js y React. Proporciona asistencia en tiempo real a desarrolladores, ayudando a crear componentes y resolver dudas, con una interfaz moderna y fluida.",
+  "PROJECTOS_TITLE_3": "Syro Trading Journal",
+  "PROJECTOS_DESCRIPTION_3": "Un innovador journal de trading diseñado para registrar operaciones y analizar resultados. Permite realizar un seguimiento del rendimiento, mejorar la estrategia y gestionar el riesgo, con una interfaz moderna y fluida.",
   "CATEGORIA_SOBRE": "Sobre mi",
   "SOBRE_DESCRIPTION": "Mi viaje en la programación comenzó hace tres años, explorando y creando proyectos personales que me permitieron dominar tecnologías como React, TypeScript y Tailwind CSS. A lo largo de este tiempo, he diseñado interfaces modernas y dinámicas, centrándome en la experiencia del usuario y el rendimiento web. Cada proyecto ha sido una oportunidad para perfeccionar mis habilidades, desde el desarrollo de aplicaciones interactivas hasta la implementación de diseños responsivos y optimizados. Me apasiona convertir ideas complejas en soluciones digitales claras y funcionales. Estoy siempre en busca de nuevos retos y colaboraciones, dispuesto a aportar mi creatividad y conocimientos para crear productos innovadores.",
   "CATEGORIA_CONTACTO": "Contacto"
