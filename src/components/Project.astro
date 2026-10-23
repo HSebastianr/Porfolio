@@ -8,6 +8,14 @@ import LinkIcon from "@/components/icons/Link.astro";
 import CodeIcon from "@/components/icons/Code.astro";
 import NextjsIcon from "@/components/icons/Nextjs.astro";
 import FirebaseIcon from "@/components/icons/Firebase.astro";
+import TypescriptIcon from "@/components/icons/Typescript.astro";
+import NodejsIcon from "@/components/icons/Nodejs.astro";
+import ViteIcon from "@/components/icons/Vite.astro";
+import DockerIcon from "@/components/icons/Docker.astro";
+import SupabaseIcon from "@/components/icons/Supabase.astro";
+import PostgresqlIcon from "@/components/icons/Postgresql.astro";
+import MongodbIcon from "@/components/icons/Mongodb.astro";
+import GitIcon from "@/components/icons/Git.astro";
 import { getI18N } from "@/i18n/index";
 
 const { currentLocale } = Astro;
@@ -50,6 +58,54 @@ const TAGS = {
       "bg-orange-100 text-orange-800 dark:bg-transparent dark:text-orange-300 border-orange-300",
     icon: FirebaseIcon,
   },
+  TYPESCRIPT: {
+    name: "TypeScript",
+    class:
+      "bg-indigo-100 text-indigo-800 dark:bg-transparent dark:text-indigo-300 border-indigo-300",
+    icon: TypescriptIcon,
+  },
+  NODE: {
+    name: "Node.js",
+    class:
+      "bg-lime-100 text-lime-800 dark:bg-transparent dark:text-lime-300 border-lime-300",
+    icon: NodejsIcon,
+  },
+  VITE: {
+    name: "Vite",
+    class:
+      "bg-purple-100 text-purple-800 dark:bg-transparent dark:text-purple-300 border-purple-300",
+    icon: ViteIcon,
+  },
+  DOCKER: {
+    name: "Docker",
+    class:
+      "bg-cyan-100 text-cyan-800 dark:bg-transparent dark:text-cyan-300 border-cyan-300",
+    icon: DockerIcon,
+  },
+  SUPABASE: {
+    name: "Supabase",
+    class:
+      "bg-emerald-100 text-emerald-800 dark:bg-transparent dark:text-emerald-300 border-emerald-300",
+    icon: SupabaseIcon,
+  },
+  POSTGRES: {
+    name: "PostgreSQL",
+    class:
+      "bg-blue-100 text-blue-800 dark:bg-transparent dark:text-blue-300 border-blue-300",
+    icon: PostgresqlIcon,
+  },
+  MONGODB: {
+    name: "MongoDB",
+    class:
+      "bg-green-100 text-green-800 dark:bg-transparent dark:text-green-300 border-green-300",
+    icon: MongodbIcon,
+  },
+  GIT: {
+    name: "Git",
+    class:
+      "bg-red-100 text-red-800 dark:bg-transparent dark:text-red-300 border-red-300",
+    icon: GitIcon,
+  },
 };
 
 const Projects = [
@@ -68,6 +124,13 @@ const Projects = [
     demo: "https://syrose.netlify.app/",
     img: "/imageSyro.png",
   },
+  {
+    titulo: `${i18n.PROJECTOS_TITLE_4}`,
+    texto: `${i18n.PROJECTOS_DESCRIPTION_4}`,
+    tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.SUPABASE],
+    demo: "https://kingmobiless.netlify.app/",
+    img: "/imageKing.png",
+  },
 ];
 ---
 
@@ -77,7 +140,7 @@ const Projects = [
       <div class=" max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-transparent dark:border-[#212121]">
         <div class="relative">
           <img
-            class="rounded-t-lg w-full"
+            class="rounded-t-lg w-full h-48 md:h-56 object-cover"
             src={img}
             alt=""
           />
@@ -108,8 +171,10 @@ const Projects = [
             {texto}
           </p>
 
-          <ButtonProject href={code} target="_blank" >Code <CodeIcon class="mx-1 size-5"/></ButtonProject>
-          <ButtonProject href={demo} target="_blank" >Ver demo <LinkIcon class="mx-1 size-5"/></ButtonProject>
+          {code && (
+            <ButtonProject href={code} target="_blank">Code <CodeIcon class="mx-1 size-5" /></ButtonProject>
+          )}
+          <ButtonProject href={demo} target="_blank">Ver demo <LinkIcon class="mx-1 size-5" /></ButtonProject>
         </div>
       </div>
     ))
